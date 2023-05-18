@@ -1,0 +1,21 @@
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group-text {
+    width: 170px;
+}
+
+.alert {
+    height: 25px;
+    align-items: center;
+    display: flex;
+}
+
+.card {
+    min-height: 0;
+}
+
+.card-body {
+    height: fit-content;
+}

@@ -1,0 +1,31 @@
+#background-container {
+    background: url("../../static/img/wallpaper.png") no-repeat center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: calc(100vh - 56px);
+    width: 100vw;
+    overflow-y: hidden;
+    z-index: -1;
+    padding-top: 4rem;
+}
+
+#index-container {
+    margin-top: 3rem;
+}
+
+#start-purchase-btn {
+    background-color: #23364e;
+    border-color: #23364e;
+    color: white;
+}
+
+#start-purchase-link {
+    text-decoration: none;
+    color: white;
+}
+
+.row {
+    height: auto;
+}
