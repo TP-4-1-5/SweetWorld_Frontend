@@ -1,0 +1,12 @@
+#success-msg {
+    position: fixed;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-inline: auto;
+    width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
