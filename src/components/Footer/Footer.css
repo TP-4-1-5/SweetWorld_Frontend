@@ -1,0 +1,12 @@
+.footer-links > a {
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+}
+
+.devops-block > *:not(.title) {
+    font-weight: bold;
+}
+
+.copyright {
+    color: #9a9a9a;
+}
