@@ -1,0 +1,7 @@
+.header-row {
+    height: 500px;
+}
+
+.header-row > * {
+    height: 100%;
+}
