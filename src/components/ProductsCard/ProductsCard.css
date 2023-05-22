@@ -1,0 +1,27 @@
+#product-card {
+    min-height: 700px;
+}
+
+#product-card img {
+    max-height: 500px;
+}
+
+#product-card .card-body {
+    min-height: 200px;
+    flex: none;
+    margin-top: auto;
+}
+
+.btn {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    #product-card {
+        min-height: auto;
+    }
+
+    #product-card img {
+        max-height: 700px;
+    }
+}
