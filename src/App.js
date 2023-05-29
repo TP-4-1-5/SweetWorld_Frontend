@@ -5,7 +5,6 @@ import { AuthContext } from "./context";
 import React, { useEffect, useState } from "react";
 import AppRouter from "./components/AppRouter";
 import { BrowserRouter } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
 
 function App() {
     const [isAuth, setIsAuth] = useState(false);
