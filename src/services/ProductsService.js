@@ -13,8 +13,8 @@ export default class ProductsService {
     })
   }
 
-  static async getAllProducts() {
-    return await $api.get(`/products/getproductlist`);
+  static async getProductsByName(name) {
+    return await $api.get(`/products/getproductlistwithname?name=${name}`);
   }
 
   static async getProductById(id) {
