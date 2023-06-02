@@ -6,6 +6,7 @@ import { AuthContext } from "../../context";
 import AlertMessage from "../AlertMessage/AlertMessage";
 import ProductsService from "../../services/ProductsService";
 import { Link } from "react-router-dom";
+import {sendMetric} from "../../utils/metric";
 
 const ProductsCard = ({ product }) => {
   const { isAuth, user } = useContext(AuthContext);
@@ -60,7 +61,7 @@ const ProductsCard = ({ product }) => {
               >Добавить в избранное
               </Button>
                   :
-              <Link to="/login" className="btn btn btn-outline-success mb-2"
+              <Link onClick={() => {sendMetric('reachGoal','AddFavourite')}} to="/login" className="btn btn btn-outline-success mb-2"
               >Добавить в избранное
               </Link>
             }
