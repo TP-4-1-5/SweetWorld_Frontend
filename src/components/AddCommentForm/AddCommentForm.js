@@ -4,6 +4,7 @@ import "./AddCommentForm.css";
 import CommentsService from "../../services/CommentsService";
 import { AuthContext } from "../../context";
 import { Link } from "react-router-dom";
+import {sendMetric} from "../../utils/metric";
 
 const AddCommentForm = ({fetch, product_id, product_name}) => {
   const { user, isAuth } = useContext(AuthContext);
@@ -44,7 +45,7 @@ const AddCommentForm = ({fetch, product_id, product_name}) => {
           <Form.Group>
             {
               isAuth ?
-              <Button type="submit" variant="secondary" id="commentBtn" onClick={addComment}>
+              <Button onClick={() => {sendMetric('reachGoal','AddComment')}} type="submit" variant="secondary" id="commentBtn" onClick={addComment}>
                 Оставить комментарий
               </Button>
                 : <Link to="/login" className="btn btn-secondary">Оставить комментарий</Link>

@@ -3,6 +3,7 @@ import { FaCoffee, FaShoppingBag, FaSignInAlt, FaUserCircle } from 'react-icons/
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { AuthContext } from "../context";
 import { Link } from "react-router-dom";
+import { sendMetric } from "../utils/metric";
 
 const Header = () => {
   const { isAuth, setIsAuth, user, setUser } = useContext(AuthContext);
@@ -39,7 +40,7 @@ const Header = () => {
                     </NavDropdown.Item>
                   </NavDropdown>
                 </>
-              : <Link className="nav-link" to="/login">Войти <FaSignInAlt/></Link>
+              : <Link onClick={() => {sendMetric('reachGoal','LoginButton')}} className="nav-link" to="/login">Войти <FaSignInAlt/></Link>
             }
           </Nav>
         </Navbar.Collapse>
