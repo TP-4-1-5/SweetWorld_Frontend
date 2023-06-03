@@ -1,0 +1,14 @@
+.comment {
+    width: 100%;
+}
+
+.remove-icon {
+    position: absolute;
+    right: 8px;
+    color: red;
+    cursor: pointer;
+}
+
+.remove-icon img {
+    height: 50px;
+}
