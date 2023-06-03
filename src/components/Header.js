@@ -15,37 +15,37 @@ const Header = () => {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Link className="navbar-brand" to="/">Sweet World <FaCoffee/></Link>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <Link className="nav-link" to="/products">Каталог <FaShoppingBag/></Link>
-            {
-              isAuth
-                ?
-                <>
-                  <NavDropdown title={<FaUserCircle/>} menuVariant="dark">
-                    <Link to="/account" className="dropdown-item">
-                      Кабинет
-                    </Link>
-                    {
-                      user.is_superuser &&
-                      <a className="dropdown-item" href="http://45.141.101.242:30/admin">Для администратора</a>
-                    }
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Link className="navbar-brand" to="/">Sweet World <FaCoffee/></Link>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto">
+              <Link className="nav-link" to="/products">Каталог <FaShoppingBag/></Link>
+              {
+                isAuth
+                    ?
+                    <>
+                      <NavDropdown title={<FaUserCircle/>} menuVariant="dark">
+                        <Link to="/account" className="dropdown-item">
+                          Кабинет
+                        </Link>
+                        {
+                            user.is_superuser &&
+                            <a className="dropdown-item" href="http://45.141.101.242:30/admin">Для администратора</a>
+                        }
 
-                    <NavDropdown.Item onClick={exit}>
-                      Выйти
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </>
-              : <Link onClick={() => {sendMetric('reachGoal','LoginButton')}} className="nav-link" to="/login">Войти <FaSignInAlt/></Link>
-            }
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+                        <NavDropdown.Item onClick={exit}>
+                          Выйти
+                        </NavDropdown.Item>
+                      </NavDropdown>
+                    </>
+                    : <Link onClick={() => {sendMetric('reachGoal','LoginButton')}} className="nav-link" to="/login">Войти <FaSignInAlt/></Link>
+              }
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
   );
 };
 
